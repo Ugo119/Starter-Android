@@ -1,39 +1,25 @@
 plugins {
-    alias(libs.plugins.android.application)
-//    alias(libs.plugins.kotlin.android)
-//    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.starter.project.android.application.compose)
+    alias(libs.plugins.starter.project.jvm.ktor)
 }
 
 android {
     namespace = "com.ugo.starterproject"
-    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.ugo.starterproject"
-        minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        vectorDrawables {
+            useSupportLibrary = true
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    buildFeatures {
-        compose = true
-    }
+
 }
 
 dependencies {
@@ -86,4 +72,7 @@ dependencies {
     implementation(projects.auth.domain)
     implementation(projects.auth.data)
 
+//    implementation(projects.feature_one.presentation)
+//    implementation(projects.feature_one.domain)
+//    implementation(projects.feature_one.data)
 }

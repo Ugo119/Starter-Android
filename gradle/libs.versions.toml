@@ -119,14 +119,14 @@ androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp
 mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
 
 # Convention Plugins
-runique-android-application = { id = "runique.android.application", version = "unspecified" }
-runique-android-application-compose = { id = "runique.android.application.compose", version = "unspecified" }
-runique-android-library = { id = "runique.android.library", version = "unspecified" }
-runique-android-library-compose = { id = "runique.android.library.compose", version = "unspecified" }
-runique-android-feature-ui = { id = "runique.android.feature.ui", version = "unspecified" }
-runique-android-room = { id = "runique.android.room", version = "unspecified" }
-runique-jvm-library = { id = "runique.jvm.library", version = "unspecified" }
-runique-jvm-ktor = { id = "runique.jvm.ktor", version = "unspecified" }
+starter-project-android-application = { id = "starterproject.android.application", version = "unspecified" }
+starter-project-android-application-compose = { id = "starterproject.android.application.compose", version = "unspecified" }
+starter-project-android-library = { id = "starterproject.android.library", version = "unspecified" }
+starter-project-android-library-compose = { id = "starterproject.android.library.compose", version = "unspecified" }
+starter-project-android-feature-ui = { id = "starterproject.android.feature.ui", version = "unspecified" }
+starter-project-android-room = { id = "starterproject.android.room", version = "unspecified" }
+starter-project-jvm-library = { id = "starterproject.jvm.library", version = "unspecified" }
+starter-project-jvm-ktor = { id = "starterproject.jvm.ktor", version = "unspecified" }
 
 [bundles]
 compose = [

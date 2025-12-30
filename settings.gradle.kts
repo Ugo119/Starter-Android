@@ -1,12 +1,7 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -19,7 +14,12 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Starter Project"
+rootProject.name = "StarterProject"
+
+// This setting enables user to write type-safe module import
+// statements in gradle like implementation(projects.auth.data)
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":app")
 include(":auth:data")
 include(":auth:domain")
@@ -29,7 +29,6 @@ include(":core:database")
 include(":core:domain")
 include(":core:presentation:designsystem")
 include(":core:presentation:ui")
-include(":build-logic:convention")
 include(":feature_one:data")
 include(":feature_one:domain")
 include(":feature_one:presentation")
