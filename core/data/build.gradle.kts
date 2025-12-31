@@ -5,6 +5,9 @@ plugins {
 
 android {
     namespace = "com.ugo.core.data"
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {

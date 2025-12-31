@@ -50,16 +50,16 @@ internal fun Project.configureBuildTypes(
 }
 
 private fun BuildType.configureDebugBuildType(
-    apiKey: String,
-    baseUrl: String
+    apiKey: String?,
+    baseUrl: String?
 ) {
     buildConfigField("String", "API_KEY", "\"$apiKey\"")
     buildConfigField("String", "BASE_URL", "\"$baseUrl\"")
 }
 
 private fun BuildType.configureReleaseBuildType(
-    apiKey: String,
-    baseUrl: String,
+    apiKey: String?,
+    baseUrl: String?,
     commonExtension: CommonExtension<*,*,*,*,*>
     ) {
     buildConfigField("String", "API_KEY", "\"$apiKey\"")
